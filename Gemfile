@@ -10,8 +10,8 @@ group :production do
   gem 'rails_12factor'
 end
 
-# Bootstrap Sass more info at https://github.com/twbs/bootstrap-sass
-gem 'bootstrap-sass'
+# Devise more info at https://github.com/plataformatec/devise
+gem 'devise'
 # Bootstrap more info at https://github.com/twbs/bootstrap-rubygem
 gem 'bootstrap'
 # Figaro more info at https://github.com/laserlemon/figaro

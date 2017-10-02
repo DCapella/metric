@@ -10,6 +10,8 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Bootstrap Sass more info at https://github.com/twbs/bootstrap-sass
+gem 'bootstrap-sass'
 # Bootstrap more info at https://github.com/twbs/bootstrap-rubygem
 gem 'bootstrap'
 # Figaro more info at https://github.com/laserlemon/figaro
@@ -42,6 +44,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
+  # Rails Controller Testing more info at https://github.com/rails/rails-controller-testing
+  gem 'rails-controller-testing'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring

@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { confirmations: 'confirmations' }
+
   get 'welcome/index'
 
   get 'welcome/about'
+
+  get 'welcome/confirmation'
 
   root 'welcome#index'
 

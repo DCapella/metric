@@ -22,3 +22,5 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+* Using Gem mailcatcher but not in Gemfile

@@ -55,7 +55,7 @@ group :development, :test do
   # Shoulda more info at https://github.com/thoughtbot/shoulda
   gem 'shoulda'
   # Faker more info at https://github.com/stympy/faker
-  gem 'faker'
+  gem 'faker', :git => 'git://github.com/stympy/faker.git', :branch => 'master'
   # Factory Girl more info at https://github.com/thoughtbot/factory_girl
   gem 'factory_girl_rails'
   # Pry Rails more info at https://github.com/rweng/pry-rails

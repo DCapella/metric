@@ -1,21 +1,21 @@
 class RegisteredApplicationsController < ApplicationController
   def index
-    @registered_applications = Application.all
+    @registered_applications = RegisteredApplication.all
   end
 
   def show
-    @registered_application = Application.find(params[:id])
+    @registered_application = RegisteredApplication.find(params[:id])
   end
 
   def new
     @user = current_user
-    @registered_application = Application.new
+    @registered_application = RegisteredApplication.new
   end
 
   def create
-    @registered_application      = Application.new
-    @registered_application.name = params[:application][:name]
-    @registered_application.url  = params[:application][:url]
+    @registered_application      = RegisteredApplication.new
+    @registered_application.name = params[:registered_application][:name]
+    @registered_application.url  = params[:registered_application][:url]
     @user                        = current_user
     @registered_application.user = @user
 
@@ -29,14 +29,14 @@ class RegisteredApplicationsController < ApplicationController
 
   def edit
     @user = current_user
-    @registered_application = Application.find(params[:id])
+    @registered_application = RegisteredApplication.find(params[:id])
   end
 
   def update
-    @registered_application = Application.find(params[:id])
+    @registered_application = RegisteredApplication.find(params[:id])
 
-    @registered_application.name = params[:application][:name]
-    @registered_application.url  = params[:application][:url]
+    @registered_application.name = params[:registered_application][:name]
+    @registered_application.url  = params[:registered_application][:url]
     @user                        = current_user
     @registered_application.user = @user
 
@@ -49,7 +49,7 @@ class RegisteredApplicationsController < ApplicationController
   end
 
   def destroy
-    @registered_application = Application.find(params[:id])
+    @registered_application = RegisteredApplication.find(params[:id])
 
     if @registered_application.destroy
       flash[:notice] = "\"#{@registered_application.name}\" was deleted successfully."

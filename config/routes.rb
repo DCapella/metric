@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
-  # resources :registered_applications
   devise_for :users, controllers: { confirmations: 'confirmations' }
-  # resources :registered_applications,
-  resources :applications, controller: 'registered_applications'
+
+  resources :registered_applications
 
   get 'welcome/about'
 

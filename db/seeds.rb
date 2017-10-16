@@ -16,20 +16,20 @@ user_test = User.new(
 user.save!
 user_test.save!
 
-Application.create!(
+RegisteredApplication.create!(
   name: 'This is for Admin.',
   url: 'http://www.admin.com',
   user: user
 )
 
-Application.create!(
+RegisteredApplication.create!(
   name: 'This is for Test.',
   url: 'http://www.test.com',
   user: user_test
 )
 
 10.times do
-  Application.create!(
+  RegisteredApplication.create!(
     name: RandomData.random_sentence,
     url: RandomData.random_url,
     user: user
@@ -37,7 +37,7 @@ Application.create!(
 end
 
 10.times do
-  Application.create!(
+  RegisteredApplication.create!(
     name: RandomData.random_sentence,
     url: RandomData.random_url,
     user: user_test
@@ -47,4 +47,4 @@ end
 puts "Seed finished"
 puts "#{User.count} User(s) created"
 puts "#{User.first.email} is the first one"
-puts "#{Application.count} applications registered"
+puts "#{RegisteredApplication.count} applications registered"

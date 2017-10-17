@@ -1,4 +1,4 @@
-require 'random_data'
+require 'faker'
 
 user = User.new(
   email: 'Admin@admin.com',
@@ -30,17 +30,25 @@ RegisteredApplication.create!(
 
 10.times do
   RegisteredApplication.create!(
-    name: RandomData.random_sentence,
-    url: RandomData.random_url,
+    name: Faker::Science.unique.element,
+    url: Faker::Internet.unique.url,
     user: user
   )
 end
 
 10.times do
   RegisteredApplication.create!(
-    name: RandomData.random_sentence,
-    url: RandomData.random_url,
+    name: Faker::Science.unique.element,
+    url: Faker::Internet.unique.url,
     user: user_test
+  )
+end
+applications = RegisteredApplication.all
+
+100.times do
+  Event.create!(
+    registered_application: applications.sample,
+    name: Faker::Coffee.blend_name
   )
 end
 
@@ -48,3 +56,4 @@ puts "Seed finished"
 puts "#{User.count} User(s) created"
 puts "#{User.first.email} is the first one"
 puts "#{RegisteredApplication.count} applications registered"
+puts "#{Event.count} events created"

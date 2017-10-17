@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/stympy/faker.git
+  revision: 657162ad07a574f5e6b22d009eb6ff1253786bca
+  branch: master
+  specs:
+    faker (1.8.4)
+      i18n (~> 0.5)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -73,8 +81,6 @@ GEM
     factory_girl_rails (4.8.0)
       factory_girl (~> 4.8.0)
       railties (>= 3.0.0)
-    faker (1.8.4)
-      i18n (~> 0.5)
     ffi (1.9.18)
     figaro (1.1.1)
       thor (~> 0.14)
@@ -234,7 +240,7 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   devise
   factory_girl_rails
-  faker
+  faker!
   figaro
   jbuilder (~> 2.5)
   jquery-rails

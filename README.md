@@ -24,3 +24,19 @@ Things you may want to cover:
 * ...
 
 * Using Gem mailcatcher but not in Gemfile
+
+Add this JavaScript code to the application you want to track:
+
+  var metric = {};
+  metric.report = function(eventName){
+    var event = {event: {name: eventName }};
+    var request = new XMLHttpRequest();
+    request.open("POST", "http://localhost:3000/api/events", true);
+    request.setRequestHeader('Origin', 'http://localhost:####/');
+    request.setRequestHeader('Content-Type', 'application/json');
+    request.send(JSON.stringify(event));
+  }
+
+  * Call with `<%= javascript_tag "metric.report(eventName)" %>`
+  
+  * Make sure the Application you are tracking is registered with the correct URL

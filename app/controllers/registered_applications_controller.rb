@@ -60,4 +60,10 @@ class RegisteredApplicationsController < ApplicationController
       render :show
     end
   end
+
+  private
+
+  def required_application_params
+    params.require(:registered_application).permit(:name, :url, :id)
+  end
 end

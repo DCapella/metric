@@ -10,6 +10,10 @@ group :production do
   gem 'rails_12factor'
 end
 
+# Groupdate more info at https://github.com/ankane/groupdate
+gem 'groupdate'
+# Chartkick more info at https://github.com/ankane/chartkick
+gem 'chartkick'
 # Devise more info at https://github.com/plataformatec/devise
 gem 'devise'
 # Bootstrap more info at https://github.com/twbs/bootstrap-rubygem

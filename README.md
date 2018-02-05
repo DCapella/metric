@@ -1,31 +1,17 @@
-# README
+# Metric
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Metric is a Rails application that offers analytic service of a few features such as allowing users to track events on their website with a client-side JavaScript snippet, a server-side API that saves those events to a database and displays it for the user.
 
-Things you may want to cover:
+Rails is always fun to make applications with and this little twist added to a web application allows me to see a different side of Rails.
 
-* Ruby version
+Besides some of the usual gems for a Ruby on Rails application, this one also uses the following:
 
-* System dependencies
+* Devise    - Authentication
+* Faker     - Simulate a variety of tracked events
+* Bootstrap - Responsive application
+* Figaro    - Secured configuration of application
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-* Using Gem mailcatcher but not in Gemfile
-
-Add this JavaScript code to the application you want to track:
+In addition, add this JavaScript code to the application you want to track:
 
   var metric = {};
   metric.report = function(eventName){
@@ -38,5 +24,5 @@ Add this JavaScript code to the application you want to track:
   }
 
   * Call with `<%= javascript_tag "metric.report(eventName)" %>`
-  
+
   * Make sure the Application you are tracking is registered with the correct URL

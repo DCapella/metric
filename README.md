@@ -13,6 +13,7 @@ Besides some of the usual gems for a Ruby on Rails application, this one also us
 
 In addition, add this JavaScript code to the application you want to track:
 
+```javascript
   var metric = {};
   metric.report = function(eventName){
     var event = {event: {name: eventName }};
@@ -22,6 +23,7 @@ In addition, add this JavaScript code to the application you want to track:
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify(event));
   }
+```
 
   * Call with `<%= javascript_tag "metric.report(eventName)" %>`
 
